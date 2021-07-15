@@ -1,0 +1,12 @@
+---
+- name: "Playing with Arch and Ansible"
+  hosts: localhost
+  become: true
+  connection: local 
+
+  tasks:
+    - name: Apply tags to tasks inside the role (import_role)
+      import_role:
+        name: arch-packages
+      tags:
+        - install

@@ -1,0 +1,82 @@
+---
+# vars file for packages
+
+basic_packages: "{{ default_packages + media_packages + font_packages + x_packages + gpu_packages + app_packages + dev_packages + theme_packages + wm_packages }}"
+
+default_packages:
+  - wget
+  - thunar
+  - alacritty
+  - openssh 
+  - bash-completion
+  - htop
+  - zsh
+  - neofetch
+  - grub-customizer
+  - firefox
+  - ntfs-3g
+  - base-devel
+
+media_packages:
+  - pulseaudio 
+  - pulseaudio-alsa 
+  - pavucontrol  
+  - dbus 
+  - bluez 
+  - bluez-utils 
+  - pulseaudio-bluetooth 
+  - blueman 
+  - alsa-plugins 
+  - alsa-utils  
+  - archlinux-wallpaper  
+  - plasma-workspace-wallpapers 
+
+font_packages:
+  - ttf-jetbrains-mono
+  - ttf-font-awesome
+  - ttf-dejavu
+  - adobe-source-code-pro-fonts
+
+x_packages:
+  - xorg
+  - xorg-xinit
+  - xterm
+  - xorg-xrandr
+  - xorg-xeyes
+  - xorg-xrdb
+  - arandr
+
+gpu_packages:
+  - nvidia
+  - nvidia-utils
+  - nvidia-prime
+  - nvidia-lts
+  - nvidia-settings
+
+app_packages:
+  - rofi
+  - dmenu
+  - flameshot
+  - picom
+  - dunst
+  - nitrogen
+  - leafpad
+  - ranger
+
+dev_packages:
+  - java-runtime-common
+  - maven 
+  - gradle 
+
+theme_packages:
+  - lightdm
+  - lightdm-gtk-greeter-settings 
+  - lightdm-gtk-greeter
+  - lxappearance
+  - materia-gtk-theme
+  - papirus-icon-theme
+
+wm_packages:
+  - i3lock
+  - i3blocks
+  - i3-gaps
