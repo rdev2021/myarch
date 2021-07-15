@@ -1,2 +1,2 @@
 # myarch
-To maintain my package installation for my arch machines
+To maintain package installation for my arch machines
