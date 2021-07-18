@@ -22,3 +22,5 @@
   systemd:
     name: reflector.service
     enabled: yes
+  notify:
+    - restart reflector

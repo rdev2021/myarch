@@ -1,6 +1,6 @@
 ---
 # handlers file for arch-reflector
 - name: restart reflector
-    service:
-      name: reflector
-      state: restarted
+  service:
+    name: reflector
+    state: restarted
