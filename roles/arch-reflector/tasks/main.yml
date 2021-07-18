@@ -1,0 +1,24 @@
+---
+# tasks file for reflector setup
+#
+- name: setup reflector service
+  import_role:
+    name: arch-packages
+  vars:
+    packages:
+      - reflector
+
+- name: configure reflector service
+  template:
+    src: reflector.conf.j2
+    dest: /etc/xdg/reflector/reflector.conf
+
+- name: reload service reflector
+  systemd:
+    name: reflector.service
+    state: reloaded
+
+- name: enable reflector service
+  systemd:
+    name: reflector.service
+    enabled: yes

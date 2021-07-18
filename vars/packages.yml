@@ -1,21 +1,9 @@
 ---
 # vars file for packages
 
-basic_packages: "{{ default_packages + media_packages + font_packages + x_packages + gpu_packages + app_packages + dev_packages + theme_packages + wm_packages }}"
+packages: "{{ basic_packages + media_packages + font_packages + x_packages + gpu_packages + app_packages + dev_packages + theme_packages + wm_packages }}"
 
-arch_packages: 
-  - { name: "default_packages", state: "present" }
-  - { name: "media_packages", state: "present" }
-  - { name: "font_packages", state: "present" }
-  - { name: "x_packages", state: "present" }
-  - { name: "gpu_packages", state: "present" }
-  - { name: "app_packages", state: "present" }
-  - { name: "app_packages", state: "present" }
-  - { name: "dev_packages", state: "present" }
-  - { name: "theme_packages", state: "present" }
-  - { name: "wm_packages", state: "present" }
-
-default_packages:
+basic_packages:
   - wget
   - thunar
   - alacritty

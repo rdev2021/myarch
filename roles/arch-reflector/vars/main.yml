@@ -1,0 +1,6 @@
+---
+# vars file for arch-reflector
+ref_protocol: "http,https"
+ref_country: "India"
+ref_latest: 5
+ref_sort: rate

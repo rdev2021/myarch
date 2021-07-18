@@ -1,0 +1,6 @@
+---
+# handlers file for arch-reflector
+- name: restart memcached
+    service:
+    name: reflector
+    state: restarted

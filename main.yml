@@ -2,11 +2,17 @@
 - name: "Playing with Arch and Ansible"
   hosts: localhost
   become: true
-  connection: local 
+  connection: local
 
   tasks:
-    - name: Apply tags to tasks inside the role (import_role)
+    - name: Install and setup reflector for faster repo access
       import_role:
-        name: arch-packages
+        name: arch-reflector
       tags:
         - install
+
+    - include_vars: vars/packages.yml
+
+    - name: Install required packages
+      import_role:
+        name: arch-packages
