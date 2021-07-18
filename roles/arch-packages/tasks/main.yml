@@ -3,5 +3,6 @@
 #
 - name: Install package from repo
   community.general.pacman:
-    name: "{{ basic_packages }}"
-    state: "present"
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present) }}"
+  with_items: "{{ arch_packages }}"
