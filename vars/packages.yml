@@ -1,7 +1,7 @@
 ---
 # vars file for packages
 
-packages: "{{ basic_packages + media_packages + font_packages + x_packages + gpu_packages + app_packages + dev_packages + theme_packages + wm_packages }}"
+packages: "{{ basic_packages + media_packages + font_packages + x_packages + gpu_packages + app_packages + dev_packages + theme_packages + wm_packages + util_packages }}"
 
 basic_packages:
   - wget
@@ -16,6 +16,7 @@ basic_packages:
   - firefox
   - ntfs-3g
   - base-devel
+  - ufw
 
 media_packages:
   - pulseaudio 
@@ -80,3 +81,9 @@ wm_packages:
   - i3lock
   - i3blocks
   - i3-gaps
+
+util_packages:
+  - acpi
+  - bind
+  - inetutils
+  - rsync

@@ -5,3 +5,8 @@
   community.general.pacman:
     name: "{{ packages }}"
     state: "present"
+
+- name: Install package from repo
+  community.general.pacman:
+    name: "{{ packages }}"
+    state: "present"
