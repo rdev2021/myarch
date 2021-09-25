@@ -17,6 +17,11 @@ basic_packages:
   - ntfs-3g
   - base-devel
   - ufw
+  - gnome-keyring
+  - tree
+  - man
+  - nmap
+  - galculator
 
 media_packages:
   - pulseaudio 
@@ -46,6 +51,7 @@ x_packages:
   - xorg-xeyes
   - xorg-xrdb
   - arandr
+  - thunar
 
 gpu_packages:
   - nvidia
@@ -68,6 +74,8 @@ dev_packages:
   - java-runtime-common
   - maven 
   - gradle 
+  - go
+  - docker
 
 theme_packages:
   - lightdm
@@ -87,3 +95,4 @@ util_packages:
   - bind
   - inetutils
   - rsync
+  - numlockx
