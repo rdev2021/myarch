@@ -1,0 +1,6 @@
+---
+# handlers file for arch-bluetooth
+- name: restart bluetooth
+  service:
+    name: bluetooth
+    state: restarted

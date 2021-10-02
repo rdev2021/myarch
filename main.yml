@@ -11,8 +11,16 @@
       tags:
         - install
 
+    - name: Install and setup bluetooth services
+      import_role:
+        name: arch-bluetooth
+      tags:
+        - bluetooth
+
     - include_vars: vars/packages.yml
 
     - name: Install required packages
       import_role:
         name: arch-packages
+      tags:
+        - packages

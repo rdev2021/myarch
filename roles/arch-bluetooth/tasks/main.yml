@@ -1,0 +1,25 @@
+---
+# tasks file for arch bluetooth setup
+#
+- name: setup bluetooth service
+  import_role:
+    name: arch-packages
+  vars:
+    packages:
+      - bluez
+      - bluez-utils
+      - blueman 
+
+- name: configure bluetooth service - set AutoEnable to true
+  lineinfile:
+    path: /etc/bluetooth/main.conf
+    regexp: '^#\s+AutoEnable\s+=\s+'
+    insertafter: '^#AutoEnable='
+    line: 'AutoEnable=true'
+
+- name: enable bluetooth service
+  systemd:
+    name: bluetooth.service
+    enabled: yes
+  notify:
+    - restart bluetooth
