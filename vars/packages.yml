@@ -5,7 +5,6 @@ packages: "{{ basic_packages + media_packages + font_packages + x_packages + gpu
 
 basic_packages:
   - wget
-  - thunar
   - alacritty
   - openssh 
   - bash-completion
@@ -22,15 +21,17 @@ basic_packages:
   - man
   - nmap
   - galculator
+  - cronie  
+  - mlocate
 
 media_packages:
-  - pulseaudio 
-  - pulseaudio-alsa 
+  - pipewire  
+  - pipewire-pulse 
   - pavucontrol  
-  - dbus 
   - bluez 
   - bluez-utils 
-  - pulseaudio-bluetooth 
+  - pipewire-alsa 
+  - pipewire-jack
   - blueman 
   - alsa-plugins 
   - alsa-utils  
