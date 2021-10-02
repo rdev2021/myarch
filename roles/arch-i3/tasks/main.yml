@@ -11,7 +11,20 @@
       - i3blocks
       - i3-gaps
 
+- name: Setting up i3 directories
+  file:
+    path: "{{ ansible_user_dir }}/{{ item.dest }}"
+    mode: '0755'
+    state: directory
+  loop:
+    - { dest: ".config" }
+    - { dest: ".config/i3" }
+    - { dest: ".config/i3blocks" }
+
 - name: Setting up i3 configuration
   template:
-    src: config.j2
-    dest: /tmp/config
+    src: "{{ item.src }}"
+    dest: "{{ ansible_user_dir }}/{{ item.dest }}"
+  loop:
+    - { src: "config.j2", dest: ".config/i3/config" }
+    - { src: "i3blocks.conf.j2", dest: ".config/i3blocks/i3blocks.conf" }

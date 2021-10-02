@@ -71,6 +71,7 @@ dev_packages:
   - maven 
   - gradle 
   - go
+  - git
   - docker
 
 theme_packages:
@@ -80,11 +81,6 @@ theme_packages:
   - lxappearance
   - materia-gtk-theme
   - papirus-icon-theme
-
-wm_packages:
-  - i3lock
-  - i3blocks
-  - i3-gaps
 
 util_packages:
   - acpi

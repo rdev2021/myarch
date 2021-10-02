@@ -1,0 +1,64 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+SCRIPT_DIR={{ ansible_user_dir }}/.config/scripts
+
+
+[Kernel]
+label= 
+command=uname -r
+interval=once
+
+#[CPU]
+#label=
+#command=ps -Ao pcpu,comm --sort=-pcpu --no-headers | head -n 1
+#interval=5
+
+[cpu_usage]
+command=$SCRIPT_DIR/cpu_usage
+interval=30
+LABEL= 
+#min_width=CPU: 100.00%
+T_WARN=75
+T_CRIT=90
+DECIMALS=2
+
+[memory]
+command=$SCRIPT_DIR/memory
+label= 
+interval=30
+
+[disk]
+command=$SCRIPT_DIR/disk
+LABEL= 
+#DIR=$HOME
+ALERT_LOW=10
+interval=30
+
+[arch-update]
+command=$SCRIPT_DIR/arch-update -b#06d6a0 -u#d00000
+interval=3600
+markup=pango
+LABEL= 
+color=#ffbe0b
+
+[volume]
+command=$SCRIPT_DIR/volume
+LABEL= 
+interval=5
+signal=10
+MIXER=default
+#SCONTROL=[determined automatically]
+
+[time]
+command=date '+%Y-%m-%d %H:%M'
+interval=60
