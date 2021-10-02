@@ -1,25 +1,33 @@
 ---
 - name: "Playing with Arch and Ansible"
   hosts: localhost
-  become: true
   connection: local
 
   tasks:
     - name: Install and setup reflector for faster repo access
+      become: true
       import_role:
         name: arch-reflector
       tags:
         - install
 
     - name: Install and setup bluetooth services
+      become: true
       import_role:
         name: arch-bluetooth
       tags:
         - bluetooth
 
+    - name: Install and setup i3-wm
+      import_role:
+        name: arch-i3
+      tags:
+        - i3-wm
+
     - include_vars: vars/packages.yml
 
     - name: Install required packages
+      become: true
       import_role:
         name: arch-packages
       tags:

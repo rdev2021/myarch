@@ -52,10 +52,8 @@ x_packages:
   - thunar
 
 gpu_packages:
-  - nvidia
+  - nvidia-dkms
   - nvidia-utils
-  - nvidia-prime
-  - nvidia-lts
   - nvidia-settings
 
 app_packages:

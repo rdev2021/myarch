@@ -1,0 +1,17 @@
+---
+# tasks file for arch-i3
+#
+- name: setup i3 packages
+  become: true
+  import_role:
+    name: arch-packages
+  vars:
+    packages:
+      - i3lock
+      - i3blocks
+      - i3-gaps
+
+- name: Setting up i3 configuration
+  template:
+    src: config.j2
+    dest: /tmp/config
