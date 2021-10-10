@@ -74,6 +74,16 @@ dev_packages:
   - git
   - docker
 
+virt_packages:
+  - libvirt
+  - qemu 
+  - dmidecode
+  - ebtables
+  - dnsmasq
+  - bridge-utils
+  - openbsd-netcat
+  - virt-manager
+
 theme_packages:
   - lightdm
   - lightdm-gtk-greeter-settings 
