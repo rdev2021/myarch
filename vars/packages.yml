@@ -23,6 +23,7 @@ basic_packages:
   - galculator
   - cronie  
   - mlocate
+  - net-tools
 
 media_packages:
   - pipewire  
