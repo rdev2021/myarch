@@ -84,6 +84,9 @@ virt_packages:
   - bridge-utils
   - openbsd-netcat
   - virt-manager
+  - lxd
+  - lxc
+  - edk2-ovmf
 
 theme_packages:
   - lightdm
