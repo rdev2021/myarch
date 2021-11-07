@@ -1,7 +1,7 @@
 ---
 # vars file for packages
 
-packages: "{{ basic_packages + media_packages + font_packages + x_packages + gpu_packages + app_packages + dev_packages + theme_packages + wm_packages + util_packages }}"
+packages: "{{ basic_packages + media_packages + font_packages + x_packages + gpu_packages + app_packages + dev_packages + theme_packages + virt_packages + util_packages }}"
 
 basic_packages:
   - wget
