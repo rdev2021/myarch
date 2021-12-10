@@ -24,6 +24,7 @@ basic_packages:
   - cronie  
   - mlocate
   - net-tools
+  - unzip
 
 media_packages:
   - pipewire  
